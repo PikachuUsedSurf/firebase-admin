@@ -5,6 +5,12 @@ import { addDoc, collection, getDocs, query } from 'firebase/firestore';
 import { db } from '../firebase.config'; // Adjust the path if necessary
 
 export default function LocationForm() {
+
+
+interface Location {
+    id: string;
+    name: string;
+  }
   const [location, setLocation] = useState<Location[]>([]); // Type 'Location'
 
   useEffect(() => {
@@ -61,10 +67,4 @@ export default function LocationForm() {
       )}
     </div>
   );
-}
-
-// Interface for type safety (optional)
-interface Location {
-  id: string;
-  name: string;
 }
