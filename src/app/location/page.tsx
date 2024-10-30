@@ -28,12 +28,12 @@ export default function LocationForm() {
     e.preventDefault();
     try {
       await addDoc(collection(db, 'country'), {
-        name, // Use lowercase 'name' for consistency
+        name, 
       });
       setName('');
     } catch (error) {
       console.error('Error adding document: ', error);
-      // Handle the error, e.g., display an error message to the user
+      alert('Error adding document');
     }
   };
 
