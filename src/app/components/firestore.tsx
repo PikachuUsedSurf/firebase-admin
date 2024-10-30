@@ -29,7 +29,7 @@ const FirestoreData = () => {
         <ul>
           {users.map((user) => (
             <li key={user.id}>
-              {user.name} - {user.age}
+              {user.name}
             </li>
           ))}
         </ul>
