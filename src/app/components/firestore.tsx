@@ -10,7 +10,7 @@ const FirestoreData = () => {
     useEffect(() => {
       const fetchData = async () => {
         const usersCollection = collection(db, 'users');
-        const q = query(usersCollection, where('name', '==', 'John Doe')); // Example: Fetching users with name 'John Doe'
+        const q = query(usersCollection); // Example: Fetching users with name 'John Doe'
         const querySnapshot = await getDocs(q);
         const fetchedUsers = querySnapshot.docs.map((doc) => ({
           id: doc.id,
