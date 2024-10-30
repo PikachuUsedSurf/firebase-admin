@@ -1,0 +1,82 @@
+[debug] [2024-10-30T10:54:32.799Z] ----------------------------------------------------------------------
+[debug] [2024-10-30T10:54:32.802Z] Command:       /nix/store/aspnwxp3q1wvg8jd1zg0295zmhr3lkb3-nodejs-18.19.1/bin/node /nix/store/kdrr9n4z2kdnzn7w7p1xsys37qwl8p4a-firebase-tools-13.22.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --only hosting
+[debug] [2024-10-30T10:54:32.803Z] CLI Version:   13.22.0
+[debug] [2024-10-30T10:54:32.804Z] Platform:      linux
+[debug] [2024-10-30T10:54:32.804Z] Node Version:  v18.19.1
+[debug] [2024-10-30T10:54:32.805Z] Time:          Wed Oct 30 2024 10:54:32 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-10-30T10:54:32.805Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-30T10:54:32.922Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-30T10:54:32.923Z] > authorizing via signed-in user (meeowskersaura@gmail.com)
+[debug] [2024-10-30T10:54:32.923Z] [iam] checking project admin-test-66987 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-10-30T10:54:32.925Z] Checked if tokens are valid: false, expires at: 1730286370386
+[debug] [2024-10-30T10:54:32.926Z] Checked if tokens are valid: false, expires at: 1730286370386
+[debug] [2024-10-30T10:54:32.926Z] > refreshing access token with scopes: []
+[debug] [2024-10-30T10:54:32.928Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-30T10:54:32.928Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T10:54:33.082Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-10-30T10:54:33.083Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T10:54:33.093Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions [none]
+[debug] [2024-10-30T10:54:33.093Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions x-goog-quota-user=projects/admin-test-66987
+[debug] [2024-10-30T10:54:33.094Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-30T10:54:33.695Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions 200
+[debug] [2024-10-30T10:54:33.695Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-30T10:54:33.697Z] Checked if tokens are valid: true, expires at: 1730289272083
+[debug] [2024-10-30T10:54:33.697Z] Checked if tokens are valid: true, expires at: 1730289272083
+[debug] [2024-10-30T10:54:33.699Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/admin-test-66987 [none]
+[debug] [2024-10-30T10:54:33.932Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/admin-test-66987 200
+[debug] [2024-10-30T10:54:33.933Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/admin-test-66987 {"projectId":"admin-test-66987","projectNumber":"54906517812","displayName":"admin-test","name":"projects/admin-test-66987","resources":{"hostingSite":"admin-test-66987"},"state":"ACTIVE","etag":"1_a4ad4bb5-64db-42e4-a96d-e75805778e55"}
+[debug] [2024-10-30T10:54:36.987Z] Checked if tokens are valid: true, expires at: 1730289272083
+[debug] [2024-10-30T10:54:36.987Z] Checked if tokens are valid: true, expires at: 1730289272083
+[debug] [2024-10-30T10:54:36.988Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites pageToken=&pageSize=10
+[debug] [2024-10-30T10:54:37.843Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites 200
+[debug] [2024-10-30T10:54:37.843Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites {"sites":[{"name":"projects/admin-test-66987/sites/admin-test-66987","defaultUrl":"https://admin-test-66987.web.app","appId":"1:54906517812:web:21cd644bc5507a3ed88d61","type":"DEFAULT_SITE"}]}
+[debug] [2024-10-30T10:54:37.844Z] Checked if tokens are valid: true, expires at: 1730289272083
+[debug] [2024-10-30T10:54:37.844Z] Checked if tokens are valid: true, expires at: 1730289272083
+[debug] [2024-10-30T10:54:37.844Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906517812:web:21cd644bc5507a3ed88d61/config [none]
+[debug] [2024-10-30T10:54:38.435Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906517812:web:21cd644bc5507a3ed88d61/config 200
+[debug] [2024-10-30T10:54:38.435Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906517812:web:21cd644bc5507a3ed88d61/config {"projectId":"admin-test-66987","appId":"1:54906517812:web:21cd644bc5507a3ed88d61","storageBucket":"admin-test-66987.appspot.com","apiKey":"AIzaSyD9FxrF7RngtBg31IbadwWXOs-o3qP-DuE","authDomain":"admin-test-66987.firebaseapp.com","messagingSenderId":"54906517812","measurementId":"G-HL2PC41X5D"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-10-30T10:54:44.206Z] Checked if tokens are valid: true, expires at: 1730289272083
+[debug] [2024-10-30T10:54:44.206Z] Checked if tokens are valid: true, expires at: 1730289272083
+[debug] [2024-10-30T10:54:44.207Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 [none]
+[debug] [2024-10-30T10:54:44.992Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 200
+[debug] [2024-10-30T10:54:44.993Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 {"name":"projects/admin-test-66987/sites/admin-test-66987","defaultUrl":"https://admin-test-66987.web.app","appId":"1:54906517812:web:21cd644bc5507a3ed88d61","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.0.2
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info] unhandledRejection Error [PageNotFoundError]: Cannot find module for page: /_document
+    at getPagePath (/home/user/firebase-admin/node_modules/next/dist/server/require.js:88:15)
+    at requirePage (/home/user/firebase-admin/node_modules/next/dist/server/require.js:93:22)
+    at loadComponentsImpl (/home/user/firebase-admin/node_modules/next/dist/server/load-components.js:73:38)
+    at Object.hasCustomGetInitialProps (/home/user/firebase-admin/node_modules/next/dist/build/utils.js:1275:65)
+    at execFunction (/home/user/firebase-admin/node_modules/next/dist/compiled/jest-worker/processChild.js:1:2764)
+    at execHelper (/home/user/firebase-admin/node_modules/next/dist/compiled/jest-worker/processChild.js:1:2422)
+    at execMethod (/home/user/firebase-admin/node_modules/next/dist/compiled/jest-worker/processChild.js:1:2510)
+    at process.messageListener (/home/user/firebase-admin/node_modules/next/dist/compiled/jest-worker/processChild.js:1:1228) {
+  type: 'PageNotFoundError',
+  code: 'ENOENT'
+}
+
+[debug] [2024-10-30T10:55:31.510Z] Error: ENOENT: no such file or directory, open '/home/user/firebase-admin/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
