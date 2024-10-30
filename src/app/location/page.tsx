@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react';
 import { addDoc, collection, getDocs, query } from 'firebase/firestore';
 import { db } from '../firebase.config'; // Adjust the path if necessary
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function LocationForm() {
 
@@ -45,23 +48,25 @@ interface Location {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Location Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <button type="submit">Add Location</button>
-      </form>
+        <div className='h-96 w-96 p-12 flex'>
+            <form onSubmit={handleSubmit} className='p-12 border rounded-lg space-y-4'>
+            <Label htmlFor="terms">Country add</Label>
+            <Input 
+            type="next"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            />
+            <Button type="submit">Add Location</Button>
+            </form>
+        </div>
 
-      {/* Ensure conditional rendering to avoid empty UI elements */}
-      {location.length > 0 && ( // Check if there are locations to display
-        <div>
+      
+      {location.length > 0 && ( 
+        <div className=' text-center'>
           {location.map((location) => (
-            <div key={location.id}>{location.name}</div>
+            <div key={location.id} className='text-xl'>{location.name}</div>
           ))}
         </div>
       )}
