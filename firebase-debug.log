@@ -1,0 +1,121 @@
+[debug] [2024-11-02T11:24:53.060Z] ----------------------------------------------------------------------
+[debug] [2024-11-02T11:24:53.063Z] Command:       /nix/store/aspnwxp3q1wvg8jd1zg0295zmhr3lkb3-nodejs-18.19.1/bin/node /nix/store/kdrr9n4z2kdnzn7w7p1xsys37qwl8p4a-firebase-tools-13.22.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --only hosting
+[debug] [2024-11-02T11:24:53.064Z] CLI Version:   13.22.0
+[debug] [2024-11-02T11:24:53.064Z] Platform:      linux
+[debug] [2024-11-02T11:24:53.064Z] Node Version:  v18.19.1
+[debug] [2024-11-02T11:24:53.065Z] Time:          Sat Nov 02 2024 11:24:53 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-11-02T11:24:53.065Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-02T11:24:53.070Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-11-02T11:24:53.289Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-02T11:24:53.290Z] > authorizing via signed-in user (meeowskersaura@gmail.com)
+[debug] [2024-11-02T11:24:53.290Z] [iam] checking project admin-test-66987 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-11-02T11:24:53.291Z] Checked if tokens are valid: false, expires at: 1730289272083
+[debug] [2024-11-02T11:24:53.292Z] Checked if tokens are valid: false, expires at: 1730289272083
+[debug] [2024-11-02T11:24:53.292Z] > refreshing access token with scopes: []
+[debug] [2024-11-02T11:24:53.293Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-02T11:24:53.294Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-02T11:24:53.354Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-11-02T11:24:53.355Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-02T11:24:53.365Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions [none]
+[debug] [2024-11-02T11:24:53.365Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions x-goog-quota-user=projects/admin-test-66987
+[debug] [2024-11-02T11:24:53.365Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-02T11:24:53.527Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-11-02T11:24:53.528Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-11-02T11:24:53.963Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions 200
+[debug] [2024-11-02T11:24:53.963Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/admin-test-66987:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-02T11:24:53.964Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:24:53.965Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:24:53.965Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/admin-test-66987 [none]
+[debug] [2024-11-02T11:24:54.148Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/admin-test-66987 200
+[debug] [2024-11-02T11:24:54.149Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/admin-test-66987 {"projectId":"admin-test-66987","projectNumber":"54906517812","displayName":"admin-test","name":"projects/admin-test-66987","resources":{"hostingSite":"admin-test-66987"},"state":"ACTIVE","etag":"1_9a2d7630-bc4b-477a-be05-1dd7ccd5b3b3"}
+[debug] [2024-11-02T11:24:57.528Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:24:57.528Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:24:57.529Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites pageToken=&pageSize=10
+[debug] [2024-11-02T11:24:58.401Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites 200
+[debug] [2024-11-02T11:24:58.402Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites {"sites":[{"name":"projects/admin-test-66987/sites/admin-test-66987","defaultUrl":"https://admin-test-66987.web.app","appId":"1:54906517812:web:21cd644bc5507a3ed88d61","type":"DEFAULT_SITE"}]}
+[debug] [2024-11-02T11:24:58.403Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:24:58.404Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:24:58.404Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906517812:web:21cd644bc5507a3ed88d61/config [none]
+[debug] [2024-11-02T11:24:59.094Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906517812:web:21cd644bc5507a3ed88d61/config 200
+[debug] [2024-11-02T11:24:59.095Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:54906517812:web:21cd644bc5507a3ed88d61/config {"projectId":"admin-test-66987","appId":"1:54906517812:web:21cd644bc5507a3ed88d61","storageBucket":"admin-test-66987.firebasestorage.app","apiKey":"AIzaSyD9FxrF7RngtBg31IbadwWXOs-o3qP-DuE","authDomain":"admin-test-66987.firebaseapp.com","messagingSenderId":"54906517812","measurementId":"G-HL2PC41X5D"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-11-02T11:25:04.814Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:25:04.815Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:25:04.815Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 [none]
+[debug] [2024-11-02T11:25:05.615Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 200
+[debug] [2024-11-02T11:25:05.615Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 {"name":"projects/admin-test-66987/sites/admin-test-66987","defaultUrl":"https://admin-test-66987.web.app","appId":"1:54906517812:web:21cd644bc5507a3ed88d61","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.0.2
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/8) ...
+
+[info]    Generating static pages (2/8) 
+
+[info]    Generating static pages (4/8) 
+   Generating static pages (6/8) 
+ ✓ Generating static pages (8/8)
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (app)                              Size     First Load JS
+┌ ○ /                                    136 B          99.8 kB
+├ ○ /_not-found                          899 B           101 kB
+├ ○ /dashboard                           725 B           242 kB
+├ ○ /location                            180 B           242 kB
+└ ○ /login                               2.53 kB         241 kB
++ First Load JS shared by all            99.7 kB
+  ├ chunks/215-fc1200b2ec423502.js       45.2 kB
+  ├ chunks/4bd1b696-f47af7e151d9bd9c.js  52.5 kB
+  └ other shared chunks (total)          1.9 kB
+
+
+ƒ Middleware                             31.8 kB
+
+[info] 
+○  (Static)  prerendered as static content
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • middleware
+[info] 
+[debug] [2024-11-02T11:26:17.125Z] skipping /dashboard due to it matching an unsupported rewrite/redirect/header or middlware
+[debug] [2024-11-02T11:26:17.125Z] skipping /location due to it matching an unsupported rewrite/redirect/header or middlware
+[debug] [2024-11-02T11:26:17.125Z] skipping /login due to it matching an unsupported rewrite/redirect/header or middlware
+[debug] [2024-11-02T11:26:17.126Z] skipping / due to it matching an unsupported rewrite/redirect/header or middlware
+[debug] [2024-11-02T11:26:17.126Z] skipping /404 due to it matching an unsupported rewrite/redirect/header or middlware
+[debug] [2024-11-02T11:26:17.147Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:26:17.148Z] Checked if tokens are valid: true, expires at: 1730550292355
+[debug] [2024-11-02T11:26:17.148Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 [none]
+[debug] [2024-11-02T11:26:17.931Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 200
+[debug] [2024-11-02T11:26:17.933Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/admin-test-66987/sites/admin-test-66987 {"name":"projects/admin-test-66987/sites/admin-test-66987","defaultUrl":"https://admin-test-66987.web.app","appId":"1:54906517812:web:21cd644bc5507a3ed88d61","type":"DEFAULT_SITE"}
+[debug] [2024-11-02T11:26:24.044Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at prepareFrameworks (/nix/store/kdrr9n4z2kdnzn7w7p1xsys37qwl8p4a-firebase-tools-13.22.0/lib/node_modules/firebase-tools/lib/frameworks/index.js:371:42)
+    at async deploy (/nix/store/kdrr9n4z2kdnzn7w7p1xsys37qwl8p4a-firebase-tools-13.22.0/lib/node_modules/firebase-tools/lib/deploy/index.js:58:13)
+[error] 
+[error] Error: An unexpected error has occurred.
